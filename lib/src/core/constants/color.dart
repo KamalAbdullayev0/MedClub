@@ -10,7 +10,7 @@ class AppColors {
   // Синие цвета
   static const Color background = Color(0xFFF2F5F8);
   static const Color primaryBlue = Color(0xFF0D9CD8);
-  static const Color lightBlue = Color(0xFF63B4FF);
+  static const Color lightBlue = Color(0xFFCFE2F1);
 
   // Серые цвета
   static const Color darkGrey = Color(0xFF636366);

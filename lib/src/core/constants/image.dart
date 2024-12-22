@@ -1,4 +1,4 @@
 class AppImages {
-  static const String splash = 'assets/images/splash.png';
-  static const String logo = 'assets/images/Illustration.png';
+  static const String basePath = 'assets/images/';
+  static const String splash = '${basePath}medclub_logo.png';
 }
