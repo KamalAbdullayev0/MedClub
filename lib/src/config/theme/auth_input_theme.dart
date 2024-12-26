@@ -10,14 +10,13 @@ class InputStyles {
       hintText: hint,
       hintStyle: const TextStyle(
         fontSize: 14,
-        color: AppColors.middleGrey,
+        color: AppColors.darkGrey,
         fontWeight: FontWeight.w400,
       ),
       suffixIcon: suffixIcon,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
         borderSide: const BorderSide(
-          color: AppColors.softGrey,
           width: 1,
         ),
       ),
@@ -27,7 +26,7 @@ class InputStyles {
 
   static BoxDecoration dropdownBoxDecoration = BoxDecoration(
     border: Border.all(
-      color: AppColors.softGrey,
+      color: AppColors.darkGrey,
       width: 1,
     ),
     borderRadius: BorderRadius.circular(12),

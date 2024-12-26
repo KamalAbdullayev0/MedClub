@@ -4,6 +4,7 @@ import 'package:medclub/src/config/router/router.gr.dart';
 // import 'package:medclub/src/core/constants/image.dart';
 // import 'package:medclub/src/core/constants/vector.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:medclub/src/core/constants/vector.dart';
 
 @RoutePage()
 class SplashPage extends StatefulWidget {
@@ -22,19 +23,22 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    print('ScreenWidth: $screenWidth, ScreenHeight: $screenHeight');
     return Scaffold(
       body: Center(
         child: SvgPicture.asset(
-          'assets/vectors/spotify_logo.svg',
-          width: 210,
-          height: 180,
+          AppVectors.logo,
+          width: screenWidth * 0.55,
+          height: screenHeight * 0.24,
         ),
       ),
     );
   }
 
   Future<void> redirect() async {
-    await Future.delayed(const Duration(seconds: 0));
+    await Future.delayed(const Duration(seconds: 2));
     context.router.push(GetStartedRoute());
   }
 }

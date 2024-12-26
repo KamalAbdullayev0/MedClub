@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medclub/src/config/router/router.gr.dart';
+import 'package:medclub/src/core/constants/color.dart';
 import 'package:medclub/src/core/widgets/authentication/data_field_widget.dart';
 import 'package:medclub/src/core/widgets/authentication/dropdown_field_widget.dart';
 import 'package:medclub/src/core/widgets/authentication/label_widget.dart';
@@ -6,6 +8,7 @@ import 'package:medclub/src/core/widgets/authentication/password_field_widget.da
 import 'package:medclub/src/core/widgets/authentication/phone_field_widget.dart';
 import 'package:medclub/src/core/widgets/authentication/text_field.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:medclub/src/core/widgets/custom_button.dart';
 
 @RoutePage()
 class UserRegistrationScreen extends StatelessWidget {
@@ -70,22 +73,13 @@ class UserRegistrationScreen extends StatelessWidget {
               style: TextStyle(fontSize: 12, color: Colors.grey),
             ),
             const SizedBox(height: 20),
-            SizedBox(
+            CustomButton(
+              height: screenHeight * 0.06,
               width: screenWidth,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: const Text(
-                  'Qeydiyyatdan keç',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                ),
-              ),
+              text: "Qeydiyyatdan keç",
+              onPressed: () {
+                context.router.push(const HomeRoute());
+              },
             ),
           ],
         ),

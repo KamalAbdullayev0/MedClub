@@ -24,8 +24,11 @@ class GetStartedPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SvgPicture.asset(AppVectors.logo3,
-                    width: screenWidth * 0.5, height: screenWidth * 0.5),
+                SvgPicture.asset(
+                  AppVectors.logo,
+                  width: screenWidth * 0.55,
+                  height: screenHeight * 0.24,
+                ),
                 SizedBox(height: screenHeight * 0.02),
                 const Text(
                   "Salam! Klinikalar və həkimlər haqqında məlumat əldə edin, "
@@ -44,7 +47,7 @@ class GetStartedPage extends StatelessWidget {
                   width: screenWidth * 0.7,
                   text: "Qeydiyyatdan keç",
                   onPressed: () {
-                    context.router.push(RegistraterHomeRoute());
+                    context.router.push(RegistrationHomeRoute());
                   },
                 ),
                 SizedBox(height: screenHeight * 0.015),
@@ -53,7 +56,7 @@ class GetStartedPage extends StatelessWidget {
                   width: screenWidth * 0.7,
                   text: "Daxil ol",
                   onPressed: () {
-                    print("Daxil ol pressed");
+                    context.router.push(LoginHomeRoute());
                   },
                   backgroundColor: AppColors.lightBlue,
                   textColor: AppColors.primaryBlue,
