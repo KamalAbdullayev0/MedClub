@@ -3,6 +3,6 @@ class AppVectors {
   static const String format = '.svg';
   static const String logo = '${basePath}medclub$format';
   static const String logo3 = '${basePath}spotify_logo$format';
-
-  // static const flag = "assets/vectors/flag.svg";
+  static const String applelogo = '${basePath}apple_logo$format';
+  static const String googlelogo = '${basePath}google_logo$format';  
 }

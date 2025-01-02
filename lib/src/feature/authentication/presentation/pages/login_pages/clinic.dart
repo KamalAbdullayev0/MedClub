@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medclub/src/config/router/router.gr.dart';
 
 import 'package:medclub/src/core/widgets/authentication/label_widget.dart';
+import 'package:medclub/src/core/widgets/authentication/or_widget.dart';
 import 'package:medclub/src/core/widgets/authentication/password_field_widget.dart';
 import 'package:medclub/src/core/widgets/authentication/phone_field_widget.dart';
 import 'package:auto_route/auto_route.dart';
@@ -42,6 +43,20 @@ class ClinicLoginScreen extends StatelessWidget {
                 context.router.push(const HomeRoute());
               },
             ),
+            const SizedBox(height: 20),
+            const Align(
+              alignment: Alignment.center,
+              child: const Text(
+                "Şifrəni unutmusunuz? Bərpa edin",
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.black87,
+                  height: 1.5,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const OrWidget(),
           ],
         ),
       ),

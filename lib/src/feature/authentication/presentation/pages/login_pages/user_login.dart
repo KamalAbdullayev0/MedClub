@@ -47,7 +47,7 @@ class UserLoginScreen extends StatelessWidget {
               },
             ),
             const SizedBox(height: 20),
-            Align(
+            const Align(
               alignment: Alignment.center,
               child: const Text(
                 "Şifrəni unutmusunuz? Bərpa edin",
